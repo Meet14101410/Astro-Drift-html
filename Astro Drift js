@@ -1,0 +1,9 @@
+let ship = document.getElementById("ship");
+let x = window.innerWidth / 2;
+
+document.addEventListener("keydown", e => {
+  if(e.key === "ArrowLeft") x -= 20;
+  if(e.key === "ArrowRight") x += 20;
+
+  ship.style.left = x + "px";
+});
