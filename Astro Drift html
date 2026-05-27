@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Astro Drift</title>
+  <style>
+    body{
+      margin:0;
+      overflow:hidden;
+      background:black;
+    }
+    #ship{
+      width:50px;
+      height:50px;
+      background:cyan;
+      position:absolute;
+      bottom:20px;
+      left:50%;
+      border-radius:50%;
+    }
+  </style>
+</head>
+<body>
+
+<div id="ship"></div>
+
+<script>
+  let ship = document.getElementById("ship");
+  let x = window.innerWidth / 2;
+
+  document.addEventListener("keydown", e => {
+    if(e.key === "ArrowLeft") x -= 20;
+    if(e.key === "ArrowRight") x += 20;
+    ship.style.left = x + "px";
+  });
+</script>
+
+</body>
+</html>
